@@ -1,0 +1,15 @@
+flutter_native_splash:
+  background_image: "assets/images/SplashScreen-1.png"
+  background_image_dark: "assets/images/SplashScreen-1.png"
+
+  android_12:
+    image: "assets/images/logo/OBJECTS@2x.png"
+    color: "#202020"
+    branding: "assets/images/pranding.png"
+    image_dark: "assets/images/logo/splash.png"
+    color_dark: "#202020"
+
+  android: true
+  ios: true
+  web: true
+  web_image_mode: center
