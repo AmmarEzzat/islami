@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:islami/Home/Home_Screen.dart';
+import 'package:islami/MyTheme.dart';
+import 'package:islami/module/sebha.dart';
 
 void main(){
 
@@ -23,16 +25,17 @@ class MyApp extends StatelessWidget {
 
       initialRoute:
 
-        HomeScreen.route,
+      HomeScreen.route,
         routes: {
 
   HomeScreen.route :(context)=>HomeScreen(),
+          SebhaView.route :(context)=>SebhaView(),
 
 
         },
+darkTheme: MyThemeData.DarkTheme,
 
-
-
+themeMode: ThemeMode.dark,
     );
   }
 }
