@@ -15,4 +15,6 @@ class ImageAssets {
   static const String ic_sebha ="assets/images/ic_sebha.png";
   static const String ic_time ="assets/images/ic_time.png";
   static const String islami ="assets/images/islami.png";
+
+  static const String logo ="assets/images/logo.png";
 }
