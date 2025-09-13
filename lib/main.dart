@@ -1,17 +1,12 @@
-
 import 'package:flutter/material.dart';
 import 'package:islami/Home/Home_Screen.dart';
+import 'package:islami/Home/quran/Sura_Details_Screen.dart';
 import 'package:islami/MyTheme.dart';
 import 'package:islami/module/sebha.dart';
 
-void main(){
-
-
-
+void main() {
   runApp(MyApp());
-
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -19,23 +14,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-
       debugShowCheckedModeBanner: false,
 
-      initialRoute:
+      initialRoute: HomeScreen.route,
+      routes: {
+        HomeScreen.route: (context) => HomeScreen(),
+        SebhaView.route: (context) => SebhaView(),
+        SuraDetailsScreen.route: (context) => SuraDetailsScreen(),
+      },
+      darkTheme: MyThemeData.DarkTheme,
 
-      HomeScreen.route,
-        routes: {
-
-  HomeScreen.route :(context)=>HomeScreen(),
-          SebhaView.route :(context)=>SebhaView(),
-
-
-        },
-darkTheme: MyThemeData.DarkTheme,
-
-themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.dark,
     );
   }
 }
