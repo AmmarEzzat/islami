@@ -16,14 +16,18 @@ class SuraDetailsScreen extends StatefulWidget {
 
 class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   List<String> verses = [];
-
+  void initState() {
+    super.initState();
+    Future.delayed(Duration.zero, () {
+      var args = ModalRoute.of(context)!.settings.arguments as SuraModele;
+      loadSuraFile(args.index);
+    });
+  }
   @override
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)?.settings.arguments as SuraModele;
 
-    if (verses.isEmpty) {
-      loadSuraFile(args.index);
-    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -81,13 +85,15 @@ const SizedBox(height: 30,),
 
   void loadSuraFile(int index) async {
     String suraContent = await rootBundle.loadString(
-      "assets/files/${index + 1}.txt",
+      "assets/files/quran/${index + 1}.txt",
     );
 
     List<String> suraLines = suraContent.split("\n");
 
     for (int i = 0; i < suraLines.length; i++) {
       print(suraLines[i]);
+
+
     }
 
     verses = suraLines;
