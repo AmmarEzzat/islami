@@ -8,7 +8,7 @@ class ImageAssets {
   static const String SebhaBackGround = 'assets/images/sebhaBackground.png';
   static const String SebhaBody = 'assets/images/SebhaBody.png';
   static const String QuranBg ="assets/images/QuranBackground.png";
-
+static const String SebhaHead="assets/images/sebha head.png";
   static const String ic_hadeth ="assets/images/ic_hadeth.png";
   static const String ic_quran ="assets/images/ic_quran.png";
   static const String ic_radio ="assets/images/ic_radio.png";
