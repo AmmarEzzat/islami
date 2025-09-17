@@ -7,7 +7,7 @@ class SebhaTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      backgroundColor: Colors.amberAccent,
+
 
     );
   }

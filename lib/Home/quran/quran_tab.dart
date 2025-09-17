@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/Core/Colors/AppColors.dart';
 import 'package:islami/Home/quran/Sura_Details_Screen.dart';
-import 'package:islami/module/Sura_Modele.dart';
+import 'package:islami/modele/Sura_Modele.dart';
 
 import '../../Core/Colors/images/images.dart';
 import 'Sura_List_Widget.dart';
