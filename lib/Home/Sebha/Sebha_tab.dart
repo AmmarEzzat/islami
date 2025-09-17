@@ -92,7 +92,7 @@ class _SebhaTabState extends State<SebhaTab> {
                               ),
                               SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height * .10,
+                                MediaQuery.of(context).size.height * .10,
                               ),
                             ],
                           ),
