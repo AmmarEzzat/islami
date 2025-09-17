@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/Core/Colors/AppColors.dart';
-import 'package:islami/module/Sura_Modele.dart';
+import 'package:islami/modele/Sura_Modele.dart';
 
 class SuraListWidget extends StatelessWidget {
  SuraModele suraModele;

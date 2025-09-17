@@ -7,7 +7,7 @@ class TimeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      backgroundColor: Colors.deepPurpleAccent,
+
 
     );
   }
