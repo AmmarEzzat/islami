@@ -5,6 +5,7 @@ import 'package:islami/Home/Radio/Radio_tab.dart';
 import 'package:islami/Home/Sebha/Sebha_tab.dart';
 import 'package:islami/Home/Time/Time_tab.dart';
 import 'package:islami/Home/quran/quran_tab.dart';
+import 'package:islami/on_poarding/on_poarding_screen.dart';
 
 
 

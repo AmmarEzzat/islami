@@ -20,7 +20,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
     super.initState();
     Future.delayed(Duration.zero, () {
       var args = ModalRoute.of(context)!.settings.arguments as SuraModele;
-      loadSuraFile(args.index);
+      loadSuraFile(args.fileName);
     });
   }
   @override
@@ -83,9 +83,9 @@ const SizedBox(height: 30,),
     );
   }
 
-  void loadSuraFile(int index) async {
+  void loadSuraFile(String fileName) async {
     String suraContent = await rootBundle.loadString(
-      "assets/files/quran/${index + 1}.txt",
+      "assets/files/quran/$fileName",
     );
 
     List<String> suraLines = suraContent.split("\n");

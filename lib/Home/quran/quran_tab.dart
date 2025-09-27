@@ -6,8 +6,39 @@ import 'package:islami/modele/Sura_Modele.dart';
 import '../../Core/Colors/images/images.dart';
 import 'Sura_List_Widget.dart';
 
-class QuranTab extends StatelessWidget {
+class QuranTab extends StatefulWidget {
+  static const String route = "QuranTab";
+
   QuranTab({super.key});
+
+  @override
+  State<QuranTab> createState() => _QuranTabState();
+}
+
+class _QuranTabState extends State<QuranTab> {
+  void addSuraList() {
+    for (int i = 0; i < 114; i++) {
+      SuraModele.suralList.add(
+        SuraModele(
+          suraEnName: SuraModele.suraEnglishList[i],
+          suraArName: SuraModele.suraArabicList[i],
+          numOfVerses: SuraModele.numOfVersesList[i],
+          fileName: "${i + 1}.txt",
+
+        ),
+      );
+    }
+  }
+String searchText=("");
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    addSuraList();
+  }
+
+  List<SuraModele> filterList = SuraModele.suralList;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +49,7 @@ class QuranTab extends StatelessWidget {
 
         children: [
           Image.asset(ImageAssets.logo),
-          TextField(
+          TextField(style: TextStyle(color: AppColors.White),
             cursorColor: AppColors.White,
             decoration: InputDecoration(
               border: OutlineInputBorder(
@@ -41,6 +72,26 @@ class QuranTab extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            onChanged: (text){
+
+              searchText=text;
+
+           filterList=   SuraModele.suralList.where((suraModel)
+
+
+              {
+
+                return suraModel.suraArName.contains(searchText)||
+
+               suraModel.suraEnName.toLowerCase().contains(searchText.toLowerCase())  ;
+
+
+              }
+              ).toList();
+setState(() {
+
+});
+            },
           ),
           SizedBox(height: 20),
 
@@ -98,16 +149,17 @@ class QuranTab extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).pushNamed(
                       SuraDetailsScreen.route,
-                      arguments: SuraModele.getSuraModel(index),
+                      arguments: filterList[index],
                     );
                   },
 
                   child: SuraListWidget(
-                    suraModele: SuraModele.getSuraModel(index),
+                    index: index,
+                    suraModele: filterList[index],
                   ),
                 );
               },
-              itemCount: SuraModele.getSuraItemCount(),
+              itemCount: filterList.length,
             ),
           ),
         ],

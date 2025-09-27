@@ -67,6 +67,16 @@ class Assets {
   static const String imagesIslami = 'assets/images/islami.png';
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesNumberSura1 = 'assets/images/number_sura-1.png';
+  static const String imagesOnpoarding1 = 'assets/images/onpoarding1.png';
+  static const String imagesOnpoarding13x = 'assets/images/onpoarding1@3x.png';
+  static const String imagesOnpoarding2 = 'assets/images/onpoarding2.png';
+  static const String imagesOnpoarding23x = 'assets/images/onpoarding2@3x.png';
+  static const String imagesOnpoarding3 = 'assets/images/onpoarding3.png';
+  static const String imagesOnpoarding33x = 'assets/images/onpoarding3@3x.png';
+  static const String imagesOnpoarding4 = 'assets/images/onpoarding4.png';
+  static const String imagesOnpoarding43x = 'assets/images/onpoarding4@3x.png';
+  static const String imagesOnpoarding5 = 'assets/images/onpoarding5.png';
+  static const String imagesOnpoarding53x = 'assets/images/onpoarding5@3x.png';
   static const String imagesPranding = 'assets/images/pranding.png';
   static const String imagesQuranBackground = 'assets/images/QuranBackground.png';
   static const String imagesQuranIconSearch = 'assets/images/quran-icon_search.png';
